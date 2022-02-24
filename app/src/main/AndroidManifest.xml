@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FirstComposeApplication">
         <activity
+            android:name=".TextCustomizationInCompose"
+            android:exported="false"
+            android:label="@string/title_activity_text_customization_in_compose"
+            android:theme="@style/Theme.FirstComposeApplication" />
+        <activity
             android:name=".boxLayoutTutorial"
             android:exported="false"
             android:label="@string/title_activity_box_layout_tutorial"

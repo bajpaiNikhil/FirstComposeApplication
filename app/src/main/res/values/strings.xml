@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">FirstComposeApplication</string>
     <string name="title_activity_box_layout_tutorial">boxLayoutTutorial</string>
+    <string name="title_activity_text_customization_in_compose">TextCustomizationInCompose</string>
 </resources>

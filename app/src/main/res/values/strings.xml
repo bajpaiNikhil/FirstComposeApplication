@@ -3,4 +3,6 @@
     <string name="title_activity_box_layout_tutorial">boxLayoutTutorial</string>
     <string name="title_activity_text_customization_in_compose">TextCustomizationInCompose</string>
     <string name="title_activity_text_selection_with_compose">textSelectionWithCompose</string>
+    <string name="title_activity_super_script_and_sub_script_text">SuperScriptAndSubScriptText
+    </string>
 </resources>

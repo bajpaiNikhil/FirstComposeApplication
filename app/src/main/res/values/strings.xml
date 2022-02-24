@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">FirstComposeApplication</string>
+    <string name="title_activity_box_layout_tutorial">boxLayoutTutorial</string>
 </resources>

@@ -5,4 +5,5 @@
     <string name="title_activity_text_selection_with_compose">textSelectionWithCompose</string>
     <string name="title_activity_super_script_and_sub_script_text">SuperScriptAndSubScriptText
     </string>
+    <string name="title_activity_expandable_card_with_compose">ExpandableCardWithCompose</string>
 </resources>

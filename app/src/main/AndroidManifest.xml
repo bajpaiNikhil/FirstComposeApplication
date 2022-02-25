@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FirstComposeApplication">
         <activity
+            android:name=".ExpandableCardWithCompose"
+            android:exported="false"
+            android:label="@string/title_activity_expandable_card_with_compose"
+            android:theme="@style/Theme.FirstComposeApplication" />
+        <activity
             android:name=".SuperScriptAndSubScriptText"
             android:exported="false"
             android:label="@string/title_activity_super_script_and_sub_script_text"

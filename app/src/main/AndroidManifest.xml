@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FirstComposeApplication">
         <activity
+            android:name=".signUpButtonWithCompose"
+            android:exported="false"
+            android:label="@string/title_activity_sign_up_button_with_compose"
+            android:theme="@style/Theme.FirstComposeApplication" />
+        <activity
             android:name=".ExpandableCardWithCompose"
             android:exported="false"
             android:label="@string/title_activity_expandable_card_with_compose"

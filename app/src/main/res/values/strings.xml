@@ -6,4 +6,5 @@
     <string name="title_activity_super_script_and_sub_script_text">SuperScriptAndSubScriptText
     </string>
     <string name="title_activity_expandable_card_with_compose">ExpandableCardWithCompose</string>
+    <string name="title_activity_sign_up_button_with_compose">signUpButtonWithCompose</string>
 </resources>

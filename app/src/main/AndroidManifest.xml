@@ -13,6 +13,11 @@
         android:theme="@style/Theme.FirstComposeApplication"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".gradientButtonInCompose"
+            android:exported="false"
+            android:label="@string/title_activity_gradient_button_in_compose"
+            android:theme="@style/Theme.FirstComposeApplication" />
+        <activity
             android:name=".passwordTextFieldInCompose"
             android:exported="false"
             android:label="@string/title_activity_password_text_field_in_compose"

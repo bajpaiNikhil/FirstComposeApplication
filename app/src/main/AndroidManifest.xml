@@ -2,13 +2,26 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.firstcomposeapplication">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.FirstComposeApplication">
+        android:theme="@style/Theme.FirstComposeApplication"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".passwordTextFieldInCompose"
+            android:exported="false"
+            android:label="@string/title_activity_password_text_field_in_compose"
+            android:theme="@style/Theme.FirstComposeApplication" />
+        <activity
+            android:name=".coilImageLoadingInCompose"
+            android:exported="false"
+            android:label="@string/title_activity_coil_image_loading_in_compose"
+            android:theme="@style/Theme.FirstComposeApplication" />
         <activity
             android:name=".signUpButtonWithCompose"
             android:exported="false"

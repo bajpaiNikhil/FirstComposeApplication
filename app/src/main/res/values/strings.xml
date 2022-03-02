@@ -7,4 +7,6 @@
     </string>
     <string name="title_activity_expandable_card_with_compose">ExpandableCardWithCompose</string>
     <string name="title_activity_sign_up_button_with_compose">signUpButtonWithCompose</string>
+    <string name="title_activity_coil_image_loading_in_compose">coilImageLoadingInCompose</string>
+    <string name="title_activity_password_text_field_in_compose">passwordTextFieldInCompose</string>
 </resources>

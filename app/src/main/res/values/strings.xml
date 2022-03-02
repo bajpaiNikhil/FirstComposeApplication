@@ -10,4 +10,5 @@
     <string name="title_activity_coil_image_loading_in_compose">coilImageLoadingInCompose</string>
     <string name="title_activity_password_text_field_in_compose">passwordTextFieldInCompose</string>
     <string name="title_activity_gradient_button_in_compose">gradientButtonInCompose</string>
+    <string name="title_activity_lazy_column_in_compose">lazyColumnInCompose</string>
 </resources>

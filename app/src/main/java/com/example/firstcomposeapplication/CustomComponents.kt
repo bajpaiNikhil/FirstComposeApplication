@@ -1,6 +1,7 @@
 package com.example.firstcomposeapplication
 
 
+import androidx.compose.animation.animateColorAsState
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.MaterialTheme
@@ -16,7 +17,13 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.animation.core.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.material.Text
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.TextUnit
 
 
 @Composable
@@ -28,6 +35,12 @@ fun CustomComponents(
     backGroundIndicatorStrokeWidth : Float = 100f,
     foreGroundIndicatorColor: Color = MaterialTheme.colors.primary ,
     foreGroundIndicatorStrokeWidth : Float = 100f ,
+    bigTextFontSize : TextUnit = MaterialTheme.typography.h3.fontSize  ,
+    bigTextColor :Color = MaterialTheme.colors.onSurface,
+    bigTextSuffix :String = "GB",
+    smallText :String = "Remaining" ,
+    smallTextColor :Color = MaterialTheme.colors.onSurface.copy(alpha = .3f)  ,
+    smallTextFontSize : TextUnit = MaterialTheme.typography.subtitle1.fontSize
 ){
     var allowedIndicatorValue  by remember { mutableStateOf(maxIndicatorValue)}
 
@@ -49,6 +62,18 @@ fun CustomComponents(
         animationSpec = tween(1000)
         )
 
+    val receivedValue by animateIntAsState(
+        targetValue = allowedIndicatorValue ,
+    animationSpec = tween(1000))
+
+    val animatedBigTextColor  by animateColorAsState(
+        targetValue = if(allowedIndicatorValue == 0)
+            MaterialTheme.colors.onSurface.copy(alpha = .3f)
+    else
+        bigTextColor ,
+        animationSpec = tween(1000)
+    )
+
     Column(modifier = Modifier
         .size(canvasSize)
         .drawBehind {
@@ -65,9 +90,19 @@ fun CustomComponents(
                 indicatorStrokeWidth = foreGroundIndicatorStrokeWidth,
             )
         }
+        , horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
     )
     {
-
+        EmbeddedElements(
+            bigText = receivedValue ,
+            bigTextFontSize =bigTextFontSize ,
+            bigTextColor = animatedBigTextColor,
+            bigTextSuffix = bigTextSuffix,
+            smallText = smallText,
+            smallTextColor = smallTextColor ,
+            smallTextFontSize = smallTextFontSize
+        )
     }
 }
 
@@ -121,8 +156,30 @@ fun DrawScope.foreGroundIndicator(
 
 
 @Composable
-fun EmbeddedElements(){
+fun EmbeddedElements(
+    bigText: Int ,
+    bigTextFontSize : TextUnit ,
+    bigTextColor : Color,
+    bigTextSuffix: String ,
+    smallText : String ,
+    smallTextColor: Color , 
+    smallTextFontSize : TextUnit
+    
+){
 
+    Text(
+        text = smallText ,
+    color = smallTextColor ,
+    fontSize =  smallTextFontSize ,
+    textAlign = TextAlign.Center
+    )
+    Text(
+        text = "$bigText  ${bigTextSuffix.take(2)} " ,
+        color = bigTextColor ,
+        fontSize =  bigTextFontSize ,
+        textAlign = TextAlign.Center ,
+        fontWeight = FontWeight.ExtraBold
+    )
 }
 
 @Preview(showBackground = true)

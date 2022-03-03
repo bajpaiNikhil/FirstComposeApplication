@@ -36,7 +36,6 @@ class CustomUiInCompose : ComponentActivity() {
 fun DefaultPreview12() {
     FirstComposeApplicationTheme {
 
-
       Column(
           modifier = Modifier.fillMaxSize(),
           horizontalAlignment = Alignment.CenterHorizontally

@@ -13,6 +13,11 @@
         android:theme="@style/Theme.FirstComposeApplication"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".CoustomUiInCompose"
+            android:exported="false"
+            android:label="@string/title_activity_coustom_ui_in_compose"
+            android:theme="@style/Theme.FirstComposeApplication" />
+        <activity
             android:name=".lazyColumnInCompose"
             android:exported="false"
             android:label="@string/title_activity_lazy_column_in_compose"
